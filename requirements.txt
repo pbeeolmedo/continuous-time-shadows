@@ -1,0 +1,13 @@
+# Core dependencies for the continuous-shadows library.
+# These mirror the [project.dependencies] in pyproject.toml.
+# Preferred install is `pip install -e .` (uses pyproject.toml); this file is a
+# convenience for installing just the dependencies: `pip install -r requirements.txt`.
+
+numpy
+scipy
+pandas
+pyarrow
+
+# Optional: only needed for the QubitSystem convenience class in core.py.
+# Uncomment to install, or use `pip install -e ".[qubitsystem]"`.
+# qutip

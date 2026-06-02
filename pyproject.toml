@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "continuous-shadows"
+version = "2.1.0"
+description = "Continuous-time classical shadow tomography on a single qubit (MSc thesis library)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Pablo Bee Olmedo" }]
+keywords = [
+    "quantum-information",
+    "classical-shadows",
+    "tomography",
+    "open-quantum-systems",
+    "lindblad",
+]
+
+# Core scientific stack required by the shadow pipeline and the analytical engine.
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+    "pyarrow",
+]
+
+[project.optional-dependencies]
+# qutip backs only the QubitSystem convenience class in core.py.
+qubitsystem = ["qutip"]
+
+[tool.setuptools]
+packages = ["continuous_shadows"]
